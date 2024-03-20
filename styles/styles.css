@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    transition: .25s background-color;
+}
+
+body {
+    height: 100vh;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    padding: 0;
+    padding-top: 0;
+}
+
+:root{
+  --background-color : #D8DFE8;
+  --principal-color:  #0A3871;
+  --secundary--color: #343A40;
+  --btn--primery : #0A3871;
+}
+
+.header {
+    align-items: center;
+    height: 5rem;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+.main{
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    gap: 2rem;
+    height: calc(100% - 5rem);
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+}
+.form{
+    width:600px;
+    height: 600px;
+}
+.form{
+    flex: 1;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    max-width: 680px;
+    padding: 2rem 0;
+    padding-top: 80px;
+    width: 100%;
+    margin-left: auto;
+    height: 800px;
+}
+.form .textarea {
+    flex: 1;
+    color: var(--principal-color);
+    font-size: 2rem;
+    background-color: transparent;
+    resize: none;
+}
+.form .textarea::placeholder {
+    color: var(--principal-color);
+}
+.form .label {
+    font-size: .75rem;
+    color: var(--secundary--color);
+}
+
+.form .form-btn {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.form .form-btn .btn {
+    flex: 1;
+}
+
+
+.btn {
+    color: var(--dark-blue-300);
+    border: 1px solid var(--btn--primery);
+    background-color: transparent;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    transition: .25s all;
+    cursor: pointer;
+}
+.btn-cris{
+    background-color:  var(--btn--primery);
+    color: white;
+}
+.btn-des{
+    background-color: var(--background-color);
+    color: var(--secundary--color);
+}
+
+.message-area{
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 15px #0002;
+    overflow-y: hidden;
+    
+}
+
+.message-area .copy-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-direction: column;
+    height: 100%; 
+}
+
+.message-area .message-result .result-img{
+    width: 100%;
+    display: block;
+}
+.message-area .message-result .result-title{
+    color: var(--secundary--color);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.message-area .message-result .result-paraph{
+    text-align: center;
+}
+
+.message-area .message-result .result-title,
+.message-area .message-result .result-paraph {
+    display: block; 
+}
+
+.message-area .message-result .result-img.hide {
+    display: none; 
+}
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 5rem;
+    padding: 0 1rem;
+}
+.footer .footer-text {
+    font-size: .8rem;
+    max-width: 940px;
+    text-align: center;
+    margin: 0 auto;
+    color: var(--light-blue-100);
+    line-height: 1.5;
+}
+.footer .footer-text strong {
+    font-size: .8rem;
+}
+
+.copy-sucess {
+    display: none; 
+    position: absolute; 
+    top: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    padding: 10px 20px; 
+    background-color: #4BB543; 
+    color: white; 
+    border-radius: 5px; 
+    z-index: 1000; 
+    font-size: 14px; 
+}
+
+@media (max-width: 1200px) {
+    .main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2.5rem;
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        min-height: 100vh;
+        padding: 1.5rem;
+        gap: 1rem;
+        margin-top: 1.5rem;
+
+    }
+
+    .form {
+        padding: 0;
+        margin-bottom: 2rem;
+        min-height: 60vh;
+    }
+
+    .message-area {
+        width: 100%;
+        max-width: initial;
+        background-color: white;
+        border-radius: 2rem;
+    }
+
+    .message-area .message-result {
+        gap: 1rem;
+
+    }
+
+    .message-area .message-result .result-img {
+        display: none;
+    }
+
+    .message-area .message-result .result-title {
+        font-size: 1.2rem;
+    }
+
+    .message-area .message-result .result-paraph {
+        font-size: .9rem;
+    }
+
+
+}
+
+@media (max-width: 375px) {
+    .form .textarea {
+        min-height: 30vh;
+    }
+
+    .form .form-btn {
+        flex-direction: column;
+    }
+}
